@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>10 Second</title>
+    <style type="text/css">
+        @font-face {
+            font-family: sevenSegment;
+            src: url(alarm-clock.ttf);
+        }
+        h1{
+            font-family: sevenSegment;
+            font-size: 15em;
+            color: #969696;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        h3{
+            margin-top: 50%;
+            font-size: 3em;
+            background: #557A95;
+            left: 50%;
+        }
+        h2{
+            background: #557A95;
+            margin-top: 10px;
+            left: 50%;
+            font-size: 3em;
+        }
+        h4{
+            text-align: center;
+            text-shadow: #955555;
+           
+            background: #66fcf1;
+            margin-top: 10px;
+            left: 50%;
+            font-size: 3em;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        
+           <br><br><br>
+            <h3>ohhhhhh !!!!!!!</h3>
+            <h2>Today is ur birthday</h2><br>
+            <h2>Lightfull wishes for u on next page</h2>
+        
+        <hr>
+        <h4 >Counter</h4>
+        <h1 id="count">10</h1>
+    </div>
+    <script type="text/javascript">
+        var counter = 10;
+
+        setInterval( function(){
+            counter--;
+            if( counter >=0 ){
+                id = document.getElementById("count");
+                id.innerHTML = counter;
+
+            }
+            if( counter === 0){
+                id.innerHTML = " ";
+                window.location.replace("file:///E:/vscode/web/chinu/index.html");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
